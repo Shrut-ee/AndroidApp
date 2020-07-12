@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Final Project App</string>
+    <string name="enter_lat_long">Enter latitude and longitude for a location:</string>
+    <string name="type_latitude_here">Type latitude here</string>
+    <string name="type_longitude_here">Type longitude here</string>
+    <string name="find_nearby_cities">Find Nearby Cities</string>
+    <string name="geo_location">Geo Location</string>
+    <string name="city_details">City Details</string>
+    <string name="name">Name: </string>
+    <string name="please_enter_lat">Please enter latitude</string>
+    <string name="please_enter_log">Please enter longitude</string>
 </resources>

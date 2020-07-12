@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    tools:context=".geodatasource.GrabLocationActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"
+        android:textSize="18sp"
+        android:text="@string/enter_lat_long"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etLat"
+        android:hint="@string/type_latitude_here"
+        android:layout_width="300dp"
+        android:inputType="numberDecimal"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etLong"
+        android:hint="@string/type_longitude_here"
+        android:layout_width="300dp"
+        android:inputType="numberDecimal"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnFindCities"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/find_nearby_cities"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
