@@ -9,4 +9,6 @@
     <string name="name">Name: </string>
     <string name="please_enter_lat">Please enter latitude</string>
     <string name="please_enter_log">Please enter longitude</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

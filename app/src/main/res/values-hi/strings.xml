@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">अंतिम परियोजना ऐप</string>
+    <string name="enter_lat_long">किसी स्थान के लिए अक्षांश और देशांतर दर्ज करें:</string>
+    <string name="type_latitude_here">यहां अक्षांश लिखें</string>
+    <string name="type_longitude_here">यहां देशांतर टाइप करें</string>
+    <string name="find_nearby_cities">आसपास के शहरों का पता लगाएं</string>
+    <string name="geo_location">जियो लोकेशन</string>
+    <string name="city_details">शहर का विवरण</string>
+    <string name="name">नाम: </string>
+    <string name="please_enter_lat">कृपया अक्षांश दर्ज करें</string>
+    <string name="please_enter_log">कृपया देशांतर दर्ज करें</string>
+</resources>
