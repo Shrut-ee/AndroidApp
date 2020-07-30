@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="176dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/ivHeader"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_location"
+        android:tint="@color/white"
+        android:contentDescription="@string/geo_nav_header_desc"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/headerTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivHeader"
+        android:paddingTop="8dp"
+        android:text="@string/geo_geo_location"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerTitle"
+        android:text="@string/meet_vora"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:id="@+id/headerSubTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerTitle"
+        tools:text="v1"
+        android:layout_alignParentEnd="true"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        android:id="@+id/tvAppVersion" />
+
+</RelativeLayout>

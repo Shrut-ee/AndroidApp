@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:padding="16dp"
-    tools:context=".geodatasource.GrabLocationActivity">
+    tools:context=".geodatasource.CitySearchFragment">
 
     <TextView
         android:layout_width="match_parent"
@@ -14,28 +14,30 @@
         android:gravity="center"
         android:layout_marginBottom="32dp"
         android:textSize="18sp"
-        android:text="@string/enter_lat_long"
+        android:text="@string/geo_enter_lat_long"
         android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/etLat"
-        android:hint="@string/type_latitude_here"
+        android:hint="@string/geo_type_latitude_here"
         android:layout_width="300dp"
-        android:inputType="numberDecimal"
+        android:inputType="numberDecimal|numberSigned"
         android:layout_height="wrap_content" />
 
     <EditText
         android:id="@+id/etLong"
-        android:hint="@string/type_longitude_here"
+        android:hint="@string/geo_type_longitude_here"
         android:layout_width="300dp"
-        android:inputType="numberDecimal"
+        android:inputType="numberDecimal|numberSigned"
         android:layout_height="wrap_content" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        android:backgroundTint="@color/colorAccent"
         android:id="@+id/btnFindCities"
         android:layout_width="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/find_nearby_cities"
+        android:textColor="@color/white"
+        android:text="@string/geo_find_nearby_cities"
         android:layout_height="wrap_content" />
 
 </LinearLayout>

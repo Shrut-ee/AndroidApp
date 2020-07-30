@@ -4,30 +4,27 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.Button;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.finalprojectapp.R;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 /**
- * This activity gets latitude and longitude from the user
+ * This fragment gets latitude and longitude from the user, validate it and then pass it to the city list screen
  *
  * @author Meet Vora
  */
-public class GrabLocationActivity extends AppCompatActivity {
+public class CitySearchFragment extends Fragment {
 
     /**
      * Two EditText objects to get the user input for Latitude and Longitude
      */
     private EditText etLat, etLong;
-
-    /**
-     * Button object used to pass the latitude and the longitude entered by user to the next activity
-     */
-    private Button btnFindCities;
 
     /**
      * SharedPreferences to store the latitude and longitude, so that the next time user opens this screen,
@@ -36,20 +33,20 @@ public class GrabLocationActivity extends AppCompatActivity {
     private SharedPreferences geoDataSourcePrefs;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grab_location);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-        etLat = findViewById(R.id.etLat);
-        etLong = findViewById(R.id.etLong);
-        btnFindCities = findViewById(R.id.btnFindCities);
+        View view = inflater.inflate(R.layout.fragment_city_search, container, false);
+
+        etLat = view.findViewById(R.id.etLat);
+        etLong = view.findViewById(R.id.etLong);
 
         // Getting values from shared-prefs
-        geoDataSourcePrefs = getSharedPreferences("GeoDataSourcePrefs", Context.MODE_PRIVATE);
+        geoDataSourcePrefs = getActivity().getSharedPreferences("GeoDataSourcePrefs", Context.MODE_PRIVATE);
         etLat.setText(geoDataSourcePrefs.getString("lat", ""));
         etLong.setText(geoDataSourcePrefs.getString("log", ""));
 
-        btnFindCities.setOnClickListener(v -> {
+        view.findViewById(R.id.btnFindCities).setOnClickListener(v -> {
             // Check for validation
             if (!isValidInput()) return;
 
@@ -63,11 +60,13 @@ public class GrabLocationActivity extends AppCompatActivity {
                     .apply();
 
             // Open Cities list Activity and pass the data
-            Intent intent = new Intent(GrabLocationActivity.this, CitiesActivity.class);
+            Intent intent = new Intent(getActivity(), CitiesListActivity.class);
             intent.putExtra("lat", lat);
             intent.putExtra("log", log);
             startActivity(intent);
         });
+
+        return view;
     }
 
     /**
@@ -80,11 +79,11 @@ public class GrabLocationActivity extends AppCompatActivity {
         String longitude = etLong.getText().toString().trim();
 
         if (latitude.isEmpty()) {
-            Toast.makeText(this, R.string.please_enter_lat, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), R.string.geo_please_enter_lat, Toast.LENGTH_SHORT).show();
             return false;
         }
         if (longitude.isEmpty()) {
-            Toast.makeText(this, R.string.please_enter_log, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), R.string.geo_please_enter_log, Toast.LENGTH_SHORT).show();
             return false;
         }
 

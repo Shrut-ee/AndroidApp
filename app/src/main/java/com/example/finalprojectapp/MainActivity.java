@@ -1,15 +1,17 @@
 package com.example.finalprojectapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
-import com.example.finalprojectapp.geodatasource.GrabLocationActivity;
+import com.example.finalprojectapp.geodatasource.GeoLocationActivity;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+/**
+ * The main merged activity, which will be used to navigate to each of the four parts of the final project
+ *
+ * @author Meet Vora
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,9 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Click listener for Geo Location part
-        findViewById(R.id.btnGeoLocation).setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, GrabLocationActivity.class));
+        findViewById(R.id.geoLocation).setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, GeoLocationActivity.class));
         });
     }
 }
