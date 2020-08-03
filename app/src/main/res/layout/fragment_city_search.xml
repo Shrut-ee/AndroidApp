@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    tools:context=".geodatasource.CitySearchFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="32dp"
+        android:textSize="18sp"
+        android:text="@string/geo_enter_lat_long"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etLat"
+        android:hint="@string/geo_type_latitude_here"
+        android:layout_width="300dp"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etLong"
+        android:hint="@string/geo_type_longitude_here"
+        android:layout_width="300dp"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:backgroundTint="@color/colorAccent"
+        android:id="@+id/btnFindCities"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:text="@string/geo_find_nearby_cities"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

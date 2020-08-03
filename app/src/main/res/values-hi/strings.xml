@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">अंतिम परियोजना ऐप</string>
+    <string name="geo_enter_lat_long">किसी स्थान के लिए अक्षांश और देशांतर दर्ज करें:</string>
+    <string name="geo_type_latitude_here">यहां अक्षांश लिखें</string>
+    <string name="geo_type_longitude_here">यहां देशांतर टाइप करें</string>
+    <string name="geo_find_nearby_cities">आसपास के शहरों का पता लगाएं</string>
+    <string name="geo_geo_location">जियो लोकेशन</string>
+    <string name="geo_city_details">शहर का विवरण</string>
+    <string name="geo_name">नाम:</string>
+    <string name="geo_please_enter_lat">कृपया अक्षांश दर्ज करें</string>
+    <string name="geo_please_enter_log">कृपया देशांतर दर्ज करें</string>
+    <string name="geo_location_instructions">निर्देश - भू स्थान</string>
+    <string name="geo_location_instructions_message">🔍\nयह ऐप आस-पास के शहरों को दिए गए अक्षांश-देशांतर स्थान के आसपास मिलेगा। \ n आप उन शहरों के बारे में विवरण भी पा सकते हैं, जैसे कि शहर का देश, मुद्रा, और आप Google मानचित्र ऐप पर शहर का स्थान भी खोल सकते हैं।\n\n♥\n यदि आप किसी भी शहर को पसंद करते हैं, तो आप उन्हें पसंदीदा के रूप में सहेज सकते हैं ताकि आप उन्हें बाद में ऑफ़लाइन भी एक्सेस कर सकें।</string>
+    <string name="geo_navigation_drawer_open">नेविगेशन दराज खोलें</string>
+    <string name="geo_navigation_drawer_close">नेविगेशन ड्रॉअर बंद करें</string>
+    <string name="geo_nav_header_desc">नेविगेशन हेडर</string>
+    <string name="geo_city_search">शहर की खोज</string>
+    <string name="geo_favorite_cities">पसंदीदा शहर</string>
+    <string name="meet_vora">मित वोरा</string>
+    <string name="geo_help">मदद</string>
+    <string name="geo_country">देश:</string>
+    <string name="geo_region">क्षेत्र:</string>
+    <string name="geo_currency">मुद्रा:</string>
+    <string name="geo_latitude">अक्षांश:</string>
+    <string name="geo_longitude">देशान्तर:</string>
+    <string name="geo_cities_loaded">शहर लोड हुए!</string>
+    <string name="geo_added_to_fav">पसंदीदा सूची में जोड़ा गया</string>
+    <string name="geo_removed_from_fav">पसंदीदा सूची से हटाया गया</string>
+    <string name="geo_about_this_project">इस परियोजना के बारे में</string>
+    <string name="geo_about_the_project">यह %s गतिविधि है,\nमित वोरा द्वारा लिखित \ n</string>
+    <string name="geo_instructions_for_this_app">इस ऐप के लिए निर्देश</string>
+    <string name="geo_about_the_api">एपीआई के बारे में</string>
+    <string name="geo_donate_to_project">परियोजना के लिए दान करें</string>
+    <string name="geo_city_list">शहर की सूची</string>
+    <string name="geo_donate_title">कृपया उदारता से दें</string>
+    <string name="geo_donate_message">आप कितना पैसा दान करना चाहते हैं?</string>
+    <string name="geo_thank_you">धन्यवाद</string>
+    <string name="geo_dollars">$$$</string>
+    <string name="geo_thank_you_for_donation">दान के लिए धन्यवाद</string>
+</resources>
