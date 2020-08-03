@@ -1,15 +1,18 @@
 package com.example.finalprojectapp.vrajsoccer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.finalprojectapp.R;
 
@@ -23,7 +26,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class SoccerMatchesActivity extends AppCompatActivity {
     ListView list;
     TextView titletv;
     MyListAdapter myAdapter;
@@ -35,14 +38,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_soccer_matches);
+
+        setSupportActionBar(findViewById(R.id.toolbar));
 
         list = (ListView) findViewById(R.id.list);
         titletv = (TextView) findViewById(R.id.title);
 
         myAdapter = new MyListAdapter(getLayoutInflater(), soccerGamess);
         list.setAdapter(myAdapter);
-        myAdapter.notifyDataSetChanged();
 
         SoccerAsync soccerAsync = new SoccerAsync();
         soccerAsync.execute();
@@ -58,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Soccer s=new Soccer(title,date,side1,side2,null);
 
-               Intent intent=new Intent(MainActivity.this,SoccerDetails.class);
+               Intent intent=new Intent(SoccerMatchesActivity.this,SoccerDetails.class);
                intent.putExtra("title",title);
                intent.putExtra("date",date);
                intent.putExtra("side1",side1);
@@ -69,9 +73,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-
-
 
     private class SoccerAsync extends AsyncTask<String, Integer, String> {
         String  titleString, dateString, side1String, side2String;
@@ -115,13 +116,9 @@ public class MainActivity extends AppCompatActivity {
                     Log.e("soccer", "Title: " +titleString);*/
                     Soccer s=new Soccer(titleString,dateString,side1String,side2String,videos.toString());
                     soccerGamess.add(s);
-//                    Xyz x = new Xyz(title, asdasd, asdas);
-//                    array.add(x);
+
                 }
 
-//                JSONObject jObject = new JSONObject(result);
-//                gameTitle = jObject.getString("title");
-//                Log.e("Async", "Title: " +titleString);
 
             }
             catch (Exception ex)
@@ -135,7 +132,36 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String s) {
+            findViewById(R.id.progressBar).setVisibility(View.GONE);
             myAdapter.notifyDataSetChanged();
         }
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.soccer_matches, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_geo_data_source:
+                startActivity(new Intent(this, SoccerMainActivity.class));
+                finish();
+                break;
+            case R.id.nav_song_lyrics_search:
+                startActivity(new Intent(this, SoccerMainActivity.class));
+                finish();
+                break;
+            case R.id.nav_deezer_song_search:
+                startActivity(new Intent(this, SoccerMainActivity.class));
+                finish();
+                break;
+            case R.id.menuItemAboutProject:
+                Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

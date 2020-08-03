@@ -3,11 +3,11 @@ package com.example.finalprojectapp.vrajsoccer;
 import java.util.ArrayList;
 
 public class Soccer {
+    private long id;
     private String title;
     private String date;
     private String side1;
     private String side2;
-
     private String videosJsonArray;
 
     public Soccer(String title) {
@@ -15,6 +15,15 @@ public class Soccer {
     }
 
     public Soccer(String title, String date, String side1, String side2, String videosJsonArray) {
+        this.title = title;
+        this.date = date;
+        this.side1 = side1;
+        this.side2 = side2;
+        this.videosJsonArray = videosJsonArray;
+    }
+
+    public Soccer(long id,String title, String date, String side1, String side2, String videosJsonArray) {
+        this.id = id;
         this.title = title;
         this.date = date;
         this.side1 = side1;
@@ -38,6 +47,8 @@ public class Soccer {
         return title;
     }
 
+    public long getId() { return id; }
+
     public void setDate(String date) {
         this.date = date;
     }
@@ -54,11 +65,11 @@ public class Soccer {
         this.title = title;
     }
 
+    public void setId(long id) { this.id = id; }
+
     public String getVideosJsonArray() {
         return videosJsonArray;
     }
 
-    public void setVideosJsonArray(String videosJsonArray) {
-        this.videosJsonArray = videosJsonArray;
-    }
+    public void setVideosJsonArray(String videosJsonArray) { this.videosJsonArray = videosJsonArray; }
 }

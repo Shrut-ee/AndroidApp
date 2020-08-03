@@ -4,16 +4,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.example.finalprojectapp.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MyListAdapter extends BaseAdapter {
 
     private LayoutInflater layoutInflater;
     private ArrayList<Soccer> array;
+
 
     public MyListAdapter(LayoutInflater layoutInflater, ArrayList<Soccer> array) {
         this.layoutInflater = layoutInflater;
@@ -38,6 +41,9 @@ public class MyListAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = layoutInflater.inflate(R.layout.activity_game_title, parent, false);
+
+
+
         TextView title = view.findViewById(R.id.title);
         title.setText(getItem(position).getTitle());
         return view;
