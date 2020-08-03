@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Final Project App</string>
+    <string name="match_date">Date of the Match:</string>
+    <string name="team1">Team 1</string>
+    <string name="vs">VS</string>
+    <string name="team2">Team 2</string>
+    <string name="url">Match Highlights</string>
 </resources>
