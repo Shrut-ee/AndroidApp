@@ -1,16 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="#123456"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="200dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:background="@color/colorPrimary"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/ivHeader"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/soccer"
+        android:tint="@color/white"
+        android:paddingTop="8dp" />
 
     <TextView
-        android:text="Soccer Match"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
+        android:id="@+id/headerTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivHeader"
+        android:paddingTop="8dp"
+        android:text="@string/soccer_title"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/headerSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerTitle"
+        android:text="@string/name"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/tvAppVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerTitle"
+        android:layout_alignParentEnd="true"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        tools:text="v1" />
+
+</RelativeLayout>

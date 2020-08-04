@@ -15,6 +15,11 @@ import com.example.finalprojectapp.R;
 
 import java.util.List;
 
+/**
+ * Activity for showing details of match selected and favourite checkbox action
+ * @author Vraj Shah
+ */
+
 public class SoccerDetails extends AppCompatActivity {
     TextView date_tv,side1_tv,side2_tv;
     CheckBox favMatch;

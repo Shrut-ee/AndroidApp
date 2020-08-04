@@ -2,6 +2,11 @@ package com.example.finalprojectapp.vrajsoccer;
 
 import java.util.ArrayList;
 
+/**
+ * POJO class for soccer object
+ * @author Vraj Shah
+ */
+
 public class Soccer {
     private long id;
     private String title;

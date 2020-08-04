@@ -12,6 +12,11 @@ import com.example.finalprojectapp.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Adapter class for listview to show all the matches from json
+ * @author Vraj Shah
+ */
+
 public class MyListAdapter extends BaseAdapter {
 
     private LayoutInflater layoutInflater;

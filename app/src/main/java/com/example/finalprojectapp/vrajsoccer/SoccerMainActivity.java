@@ -18,8 +18,14 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.finalprojectapp.MainActivity;
 import com.example.finalprojectapp.R;
 import com.google.android.material.navigation.NavigationView;
+
+/**
+ * Home/main activity from which user can select two options. and drawer layout options
+ * @author Vraj Shah
+ */
 
 public class SoccerMainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
@@ -61,11 +67,11 @@ public class SoccerMainActivity extends AppCompatActivity {
                     startActivity(new Intent(this, FavoriteSoccerMatchesActivity.class));
                     break;
                 case R.id.appInstructions:
-//                    new AlertDialog.Builder(this)
-//                            .setTitle(R.string.geo_location_instructions)
-//                            .setMessage(R.string.geo_location_instructions_message)
-//                            .setNeutralButton(android.R.string.ok, null)
-//                            .show();
+                    new AlertDialog.Builder(this)
+                            .setTitle(R.string.soccer_instructions)
+                            .setMessage(R.string.soccer_instructions_message)
+                            .setNeutralButton(android.R.string.ok, null)
+                            .show();
                     break;
                 case R.id.aboutAPI:
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.scorebat.com/video-api/")));
@@ -76,13 +82,13 @@ public class SoccerMainActivity extends AppCompatActivity {
                     editTextDonateAmount.setHint("$$$");
                     editTextDonateAmount.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
                     editTextDonateAmount.setLayoutParams(layoutParams);
-//                    new AlertDialog.Builder(this)
-//                            .setTitle(R.string.geo_donate_title)
-//                            .setMessage(R.string.geo_donate_message)
-//                            .setView(editTextDonateAmount)
-//                            .setNegativeButton(android.R.string.cancel, null)
-//                            .setPositiveButton(R.string.geo_thank_you, (dialog, which) -> Toast.makeText(GeoLocationActivity.this, R.string.geo_thank_you_for_donation, Toast.LENGTH_SHORT).show())
-//                            .show();
+                   new AlertDialog.Builder(this)
+                            .setTitle(R.string.soccer_donate_title)
+                            .setMessage(R.string.soccer_donate_message)
+                            .setView(editTextDonateAmount)
+                            .setNegativeButton(android.R.string.cancel, null)
+                            .setPositiveButton(R.string.soccer_thank_you, (dialog, which) -> Toast.makeText(SoccerMainActivity.this, R.string.soccer_thank_you_for_donation, Toast.LENGTH_SHORT).show())
+                            .show();
                     break;
             }
             return true;
@@ -95,24 +101,25 @@ public class SoccerMainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.soccer_matches, menu);
         return true;
     }
+    //toolbar method
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_geo_data_source:
-                startActivity(new Intent(this, SoccerMainActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 finish();
                 break;
             case R.id.nav_song_lyrics_search:
-                startActivity(new Intent(this, SoccerMainActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 finish();
                 break;
             case R.id.nav_deezer_song_search:
-                startActivity(new Intent(this, SoccerMainActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 finish();
                 break;
             case R.id.menuItemAboutProject:
-                Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.soccer_about_the_project, Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

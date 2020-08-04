@@ -8,12 +8,12 @@
             android:id="@+id/soccer_matches"
             android:checked="true"
             android:icon="@drawable/song"
-            android:title="Soccer Matches" />
+            android:title="@string/soccer_title" />
         <item
             android:id="@+id/soccer_fav_matches"
             android:checkable="false"
             android:icon="@drawable/song"
-            android:title="Favourites" />
+            android:title="@string/fav" />
     </group>
 
     <group
@@ -21,10 +21,10 @@
         android:checkableBehavior="none">
         <item
             android:id="@+id/appInstructions"
-            android:title="@string/soccer_instructions" />
+            android:title="@string/soccer_instruction" />
         <item
             android:id="@+id/aboutAPI"
-            android:title="@string/about_app" />
+            android:title="@string/about_application" />
         <item
             android:id="@+id/donate"
             android:title="@string/soccer_donate" />

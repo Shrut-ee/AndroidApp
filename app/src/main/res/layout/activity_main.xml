@@ -58,7 +58,7 @@
 
             <TextView
                 android:padding="16dp"
-                android:text="Soccer Highlights"
+                android:text="@string/soccer_title2"
                 android:textStyle="bold"
                 android:textColor="#FF1744"
                 android:textSize="20sp"

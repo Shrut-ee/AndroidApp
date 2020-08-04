@@ -26,6 +26,11 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 
+/**
+ * Contains two classes. Asynctask to read json
+ * @author Vraj Shah
+ */
+
 public class SoccerMatchesActivity extends AppCompatActivity {
     ListView list;
     TextView titletv;
@@ -141,7 +146,7 @@ public class SoccerMatchesActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.soccer_matches, menu);
         return true;
     }
-
+//toolbar method
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {

@@ -9,6 +9,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Database opener class which contains general methods to get view and delete database objects
+ * @author Vraj Shah
+ */
+
 public class SoccerDBOpener extends SQLiteOpenHelper {
 
     private final static String DB_NAME = "SoccerDB";

@@ -6,21 +6,21 @@
         android:id="@+id/nav_geo_data_source"
         app:showAsAction="always"
         android:icon="@drawable/geo"
-        android:title="Geo data source" />
+        android:title="@string/geo_title" />
     <item
         android:id="@+id/nav_song_lyrics_search"
         app:showAsAction="always"
         android:icon="@drawable/song_lyrics"
-        android:title="Song Lyrics Search" />
+        android:title="@string/lyrics_title" />
     <item
         android:id="@+id/nav_deezer_song_search"
         app:showAsAction="always"
         android:icon="@drawable/song"
-        android:title="Deezer Song Search" />
+        android:title="@string/deezer_title" />
 
     <item
         android:id="@+id/menuItemAboutProject"
         app:showAsAction="never"
-        android:title="About" />
+        android:title="@string/about" />
 
 </menu>
