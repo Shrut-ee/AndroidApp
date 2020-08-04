@@ -1,4 +1,4 @@
-package com.example.finalprojectapp;
+package com.example.finalprojectapp.vrajsoccer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import com.example.finalprojectapp.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/geoLocation"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="#1A0053"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/ic_location"
+                android:tint="#651FFF"
+                android:layout_width="140dp"
+                android:layout_height="140dp" />
+
+            <TextView
+                android:padding="16dp"
+                android:text="@string/geo_geo_location"
+                android:textStyle="bold"
+                android:textColor="#651FFF"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/soccerHighlights"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="#50000F"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/ic_soccer"
+                android:tint="#FF1744"
+                android:layout_width="140dp"
+                android:layout_height="140dp" />
+
+            <TextView
+                android:padding="16dp"
+                android:text="Soccer Highlights"
+                android:textStyle="bold"
+                android:textColor="#FF1744"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/songLyricsSearch"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="#003717"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/ic_music_notes"
+                android:tint="#00C853"
+                android:layout_width="140dp"
+                android:layout_height="140dp" />
+
+            <TextView
+                android:padding="16dp"
+                android:text="Song Lyrics Search"
+                android:textStyle="bold"
+                android:textColor="#00C853"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/deezerSongSearch"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="#2D0043"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/ic_library_music"
+                android:tint="#AA00FF"
+                android:layout_width="140dp"
+                android:layout_height="140dp" />
+
+            <TextView
+                android:padding="16dp"
+                android:text="Deezer Song Search"
+                android:textStyle="bold"
+                android:textColor="#AA00FF"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

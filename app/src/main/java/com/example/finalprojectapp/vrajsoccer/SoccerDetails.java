@@ -11,14 +11,8 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.finalprojectapp.HighlightsActivity;
 import com.example.finalprojectapp.R;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class SoccerDetails extends AppCompatActivity {

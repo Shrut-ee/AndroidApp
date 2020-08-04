@@ -14,10 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".vrajsoccer.SoccerMatchesActivity"/>
-        <activity android:name=".HighlightsActivity" />
+        <activity android:name=".vrajsoccer.HighlightsActivity" />
         <activity android:name=".vrajsoccer.FavoriteSoccerMatchesActivity" />
         <activity android:name=".vrajsoccer.SoccerDetails" />
-        <activity android:name=".vrajsoccer.SoccerMainActivity">
+        <activity android:name=".vrajsoccer.SoccerMainActivity"/>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
