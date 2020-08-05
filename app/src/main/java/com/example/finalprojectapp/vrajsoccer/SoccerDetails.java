@@ -1,92 +1,77 @@
 package com.example.finalprojectapp.vrajsoccer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.finalprojectapp.MainActivity;
 import com.example.finalprojectapp.R;
+import com.example.finalprojectapp.geodatasource.GeoLocationActivity;
 
 import java.util.List;
 
 /**
- * Activity for showing details of match selected and favourite checkbox action
+ * Activity from which frgament for showing soccer details is called
  * @author Vraj Shah
  */
 
 public class SoccerDetails extends AppCompatActivity {
-    TextView date_tv,side1_tv,side2_tv;
-    CheckBox favMatch;
-    Button url_b;
-    SoccerDBOpener dbOpener;
-    private Soccer s;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_soccer_details);
 
-        dbOpener = new SoccerDBOpener(this);
+        setSupportActionBar(findViewById(R.id.toolbar));
 
-        date_tv = findViewById(R.id.date_tv);
-        side1_tv = findViewById(R.id.team1_tv);
-        side2_tv = findViewById(R.id.team2_tv);
-        url_b= findViewById(R.id.url_b);
-        favMatch= findViewById(R.id.favMatch);
+        Bundle dataToPass = getIntent().getExtras();
+        SoccerDetailsFragment dFragment = new SoccerDetailsFragment();
+        dFragment.setArguments( dataToPass );
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.frag, dFragment)
+                .commit();
 
-        Intent intent =getIntent();
-        String title=intent.getStringExtra("title");
-        String date=intent.getStringExtra("date");
-        Log.e("temp", "side1: " +date);
-        String side1=intent.getStringExtra("side1");
-        String side2=intent.getStringExtra("side2");
-        String videosJsonArray=intent.getStringExtra("VideosJsonArray");
 
-        s = new Soccer(title, date, side1, side2, videosJsonArray);
+    }
 
-        List<Soccer> favMatches = dbOpener.getAllMatches();
-        for (Soccer match : favMatches) {
-            if((match.getTitle()+match.getDate()).equals((s.getTitle()+s.getDate()))){
-                favMatch.setChecked(true);
-                s.setId(match.getId());
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.soccer_matches, menu);
+        return true;
+    }
+    //toolbar method
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.nav_geo_data_source:
+                startActivity(new Intent(this, GeoLocationActivity.class));
+                finish();
                 break;
-            }
+            case R.id.nav_song_lyrics_search:
+                startActivity(new Intent(this, MainActivity.class));
+                finish();
+                break;
+            case R.id.nav_deezer_song_search:
+                startActivity(new Intent(this, MainActivity.class));
+                finish();
+                break;
+            case R.id.menuItemAboutProject:
+                Toast.makeText(this, R.string.soccer_about_the_project, Toast.LENGTH_SHORT).show();
+                break;
         }
-
-        date_tv.setText(date);
-        side1_tv.setText(side1);
-        side2_tv.setText(side2);
-
-        url_b.setOnClickListener( k -> {
-
-            Intent i = new Intent(this, HighlightsActivity.class);
-            i.putExtra("VideosJsonArray",videosJsonArray);
-            startActivity(i);
-        });
-
-        favMatch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(isChecked) { // Add to DB
-
-                    long id = dbOpener.addMatch(s);
-                    s.setId(id);
-                    Toast.makeText(SoccerDetails.this, "Added to Favorites!", Toast.LENGTH_SHORT).show();
-
-                } else { // remove from DB
-                    dbOpener.removeMatch(s.getId());
-                    Toast.makeText(SoccerDetails.this, "Removed from Favorites!", Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
-
-
+        return super.onOptionsItemSelected(item);
     }
 }

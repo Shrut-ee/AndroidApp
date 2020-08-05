@@ -7,7 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.InputType;
@@ -20,6 +22,7 @@ import android.widget.Toast;
 
 import com.example.finalprojectapp.MainActivity;
 import com.example.finalprojectapp.R;
+import com.example.finalprojectapp.geodatasource.GeoLocationActivity;
 import com.google.android.material.navigation.NavigationView;
 
 /**
@@ -36,17 +39,35 @@ public class SoccerMainActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        //button click which transfers control to soceerMatchesActivity
         findViewById(R.id.allMatches).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SoccerMainActivity.this, SoccerMatchesActivity.class));
             }
         });
+        //button click which transfers control to FavouriteSoccerMatchesActivity
         findViewById(R.id.favMatches).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SoccerMainActivity.this, FavoriteSoccerMatchesActivity.class));
+            }
+        });
+        //on the button click ,retriving shared prefs to show last watched highlights
+        findViewById(R.id.lastHighlight).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences soccerPrefs = getSharedPreferences("SoccerPrefs", Context.MODE_PRIVATE);
+                String url = soccerPrefs.getString("url", "");
+                if(url.isEmpty())
+                {
+                    Toast.makeText(getApplicationContext(), R.string.toastButton, Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Intent links = new Intent(Intent.ACTION_VIEW);
+                    links.setData(Uri.parse(url));
+                    startActivity(links);
+                }
             }
         });
 
@@ -107,7 +128,7 @@ public class SoccerMainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_geo_data_source:
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, GeoLocationActivity.class));
                 finish();
                 break;
             case R.id.nav_song_lyrics_search:

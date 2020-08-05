@@ -20,6 +20,7 @@
     <string name="favourite">पसंदीदा में जोड़ें</string>
     <string name="allmatch_button">सभी फुटबॉल मैच प्रदर्शित करें</string>
     <string name="favsoccer_button">पसंदीदा फुटबॉल मैच दिखाएं</string>
+    <string name="last_watched_highlight">अंतिम बार मैच हाइलाइट देखा गया</string>
     <string name="soccer_title">फुटबॉल मैच</string>
     <string name="name">व्रज शाह द्वारा</string>
     <string name="fav">पसंदीदा</string>
@@ -30,4 +31,7 @@
     <string name="soccer_title2">फ़ुटबॉल हाइलाइट्स</string>
     <string name="about_application">इस एप्लिकेशन के बारे में</string>
     <string name="soccer_instruction">एपीआई के लिए निर्देश</string>
+    <string name="toast">पसंदीदा में जोड़ा गया!</string>
+    <string name="snack">पसंदीदा से हटाया !!</string>
+    <string name="toastButton">There is no record for last watched highlights</string>
 </resources>

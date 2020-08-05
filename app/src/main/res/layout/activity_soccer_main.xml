@@ -66,6 +66,13 @@
             android:layout_height="70dp"
             />
 
+        <Button
+            android:id="@+id/lastHighlight"
+            android:text="@string/last_watched_highlight"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            />
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView

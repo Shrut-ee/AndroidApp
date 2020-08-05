@@ -3,10 +3,13 @@ package com.example.finalprojectapp.vrajsoccer;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,7 +17,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.finalprojectapp.MainActivity;
 import com.example.finalprojectapp.R;
+import com.example.finalprojectapp.geodatasource.GeoLocationActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -65,6 +70,8 @@ public class HighlightsActivity extends AppCompatActivity {
                     links.setData(Uri.parse(url));
                     startActivity(links);
 
+                    SharedPreferences soccerPrefs = getSharedPreferences("SoccerPrefs", Context.MODE_PRIVATE);
+                    soccerPrefs.edit().putString("url", videoLinks[position]).apply();
 
                 }
             });
@@ -74,24 +81,30 @@ public class HighlightsActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.soccer_matches, menu);
+        return true;
+    }
     //toolbar method
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_geo_data_source:
-                startActivity(new Intent(this, SoccerMainActivity.class));
+                startActivity(new Intent(this, GeoLocationActivity.class));
                 finish();
                 break;
             case R.id.nav_song_lyrics_search:
-                startActivity(new Intent(this, SoccerMainActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 finish();
                 break;
             case R.id.nav_deezer_song_search:
-                startActivity(new Intent(this, SoccerMainActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 finish();
                 break;
             case R.id.menuItemAboutProject:
-                Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.soccer_about_the_project, Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

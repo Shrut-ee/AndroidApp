@@ -14,7 +14,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.finalprojectapp.MainActivity;
 import com.example.finalprojectapp.R;
+import com.example.finalprojectapp.geodatasource.GeoLocationActivity;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -141,29 +143,31 @@ public class SoccerMatchesActivity extends AppCompatActivity {
             myAdapter.notifyDataSetChanged();
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.soccer_matches, menu);
         return true;
     }
-//toolbar method
+    //toolbar method
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_geo_data_source:
-                startActivity(new Intent(this, SoccerMainActivity.class));
+                startActivity(new Intent(this, GeoLocationActivity.class));
                 finish();
                 break;
             case R.id.nav_song_lyrics_search:
-                startActivity(new Intent(this, SoccerMainActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 finish();
                 break;
             case R.id.nav_deezer_song_search:
-                startActivity(new Intent(this, SoccerMainActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 finish();
                 break;
             case R.id.menuItemAboutProject:
-                Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.soccer_about_the_project, Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

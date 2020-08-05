@@ -4,95 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".vrajsoccer.SoccerDetails">
-    <RelativeLayout
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="?attr/actionBarSize"
+        app:title="@string/soccer_title"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:layout_marginLeft="55dp"
-            android:text="@string/match_date"/>
-        <TextView
-            android:id="@+id/date_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_marginLeft="80dp"
-            android:layout_below="@+id/date"/>
-
-        <TextView
-            android:id="@+id/team1"
-            android:layout_marginTop="70dp"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:text="@string/team1"
-            android:layout_below="@+id/date"/>
-
-        <TextView
-            android:id="@+id/team1_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textSize="20dp"
-            android:layout_below="@+id/team1"/>
-
-        <TextView
-            android:id="@+id/vs_tv"
-            android:layout_marginTop="100dp"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:text="@string/vs"
-            android:layout_below="@+id/team1"/>
-
-        <TextView
-            android:id="@+id/team2"
-            android:layout_marginTop="70dp"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:text="@string/team2"
-            android:layout_below="@+id/vs_tv"/>
-
-        <TextView
-            android:id="@+id/team2_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textSize="20dp"
-            android:layout_below="@+id/team2"/>
-
-        <CheckBox
-            android:id="@+id/favMatch"
-            android:layout_below="@+id/team2_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:focusable="false"
-            android:textSize="25dp"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="70dp"
-            android:text="@string/favourite"/>
-
-
-        <Button
-            android:id="@+id/url_b"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerInParent="true"
-            android:text="@string/url"
-            android:textSize="20dp"/>
-
-
-
-    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 
 </LinearLayout>
