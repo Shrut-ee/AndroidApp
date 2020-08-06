@@ -1,12 +1,3 @@
 <resources>
     <string name="app_name">Final Project App</string>
-
-    <string name="search_hint">Enter lyrics here</string>
-    <string name="savebutton">Save</string>
-    <string name="deletebutton">Delete</string>
-    <string name="help">Info And Help</string>\
-    <string name="lyrics_help">Author: Shruti Patel
-        \n Version: 1.0
-        \n Instructions: Search any lyrics, type in search box and click the search button. Save lyrics by clicking info where you will receive options to save or delete. To find all the saved lyrics click on saved lyrics. </string>
-    <string name="save_activity">Saved Terms</string>
 </resources>

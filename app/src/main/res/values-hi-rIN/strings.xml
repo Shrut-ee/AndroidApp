@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">अंतिम परियोजना ऐप</string>
+    <string name="match_date">मैच की तारीख और समय</string>
+    <string name="team1">टीम १</string>
+    <string name="vs">वी.एस.</string>
+    <string name="team2">टीम 2</string>
+    <string name="url">मैच की मुख्य विशेषताएं</string>
+    <string name="soccer_about_the_project">यह सॉकर मैच एप्लिकेशन है। व्रज शाह द्वारा</string>
+    <string name="about_app">यह सॉकर मैच एप्लिकेशन है। व्रज शाह द्वारा</string>
+    <string name="soccer_donate">दान करना</string>
+    <string name="open_drawer">दराज खोलें</string>
+    <string name="close_drawer">दराज को बंद करें</string>
+    <string name="soccer_instructions">फ़ुटबॉल मैच - निर्देश </string>
+    <string name="soccer_instructions_message">आप इस एप्लिकेशन से नवीनतम फुटबॉल मैच विवरण और हाइलाइट देख सकते हैं। इसके अलावा आप बाद में इसे देखने के लिए पसंदीदा में मैच जोड़ सकते हैं।</string>
+    <string name="soccer_donate_title">कृपया दान दें</string>
+    <string name="soccer_donate_message">आज आप कितना दान करना चाहेंगे?</string>
+    <string name="soccer_thank_you">धन्यवाद!!</string>
+    <string name="soccer_thank_you_for_donation">आपके दान के लिए शुक्रिया</string>
+    <string name="favourite">पसंदीदा में जोड़ें</string>
+    <string name="allmatch_button">सभी फुटबॉल मैच प्रदर्शित करें</string>
+    <string name="favsoccer_button">पसंदीदा फुटबॉल मैच दिखाएं</string>
+    <string name="last_watched_highlight">अंतिम बार मैच हाइलाइट देखा गया</string>
+    <string name="soccer_title">फुटबॉल मैच</string>
+    <string name="name">व्रज शाह द्वारा</string>
+    <string name="fav">पसंदीदा</string>
+    <string name="geo_title">जियो डेटा स्रोत</string>
+    <string name="lyrics_title">गाने के बोल सर्च</string>
+    <string name="deezer_title">डीजर सॉन्ग सर्च</string>
+    <string name="about">के बारे में</string>
+    <string name="soccer_title2">फ़ुटबॉल हाइलाइट्स</string>
+    <string name="about_application">इस एप्लिकेशन के बारे में</string>
+    <string name="soccer_instruction">एपीआई के लिए निर्देश</string>
+    <string name="toast">पसंदीदा में जोड़ा गया!</string>
+    <string name="snack">पसंदीदा से हटाया !!</string>
+    <string name="toastButton">There is no record for last watched highlights</string>
+</resources>

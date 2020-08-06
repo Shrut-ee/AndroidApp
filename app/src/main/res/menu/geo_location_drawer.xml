@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/groupOne"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_city_search"
+            android:checked="true"
+            android:icon="@drawable/ic_search"
+            android:title="@string/geo_city_search" />
+        <item
+            android:id="@+id/nav_fav_cities"
+            android:checkable="false"
+            android:icon="@drawable/ic_favorite"
+            android:title="@string/geo_favorite_cities" />
+    </group>
+
+    <group
+        android:id="@+id/groupTwo"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/appInstructions"
+            android:title="@string/geo_instructions_for_this_app" />
+        <item
+            android:id="@+id/aboutAPI"
+            android:title="@string/geo_about_the_api" />
+        <item
+            android:id="@+id/donate"
+            android:title="@string/geo_donate_to_project" />
+    </group>
+
+
+</menu>
