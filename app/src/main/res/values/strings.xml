@@ -86,7 +86,20 @@
         \n Instructions: Find any songs, type in the search box and click the search button. Save the songs by clicking the info where you will get options to save or delete. To find all stored songs, click on the stored songs.</string>
     <string name="save_activity">Saved Items</string>
     <string name="favorite_songs">Favorite Songs</string>
+    <string name="Navlyricssreach">Song Lyrics</string>
+    <string name ="navfavsongs">Favorite songs</string>
+    <string name ="navinst">about the app</string>
+    <string name ="navapi">API</string>
+    <string name ="navdon">Donate</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name = "shruti"> Shruti Patel</string>
+    <string name="donate_title">Please donate here</string>
+    <string name="donate_message">How much amount?</string>
+    <string name="thank_you">Thankyou</string>
+    <string name="dollars">$$$</string>
     <string name="song_lyrics_search">Song Lyrics Search</string>
+    <string name="lyricsinstrustions">Instructions</string>
+    <string name="lyricsinstrutionsmessage">Enter artist and song name to search the lyrics by clicking the icon.</string>
 </resources>
 
 

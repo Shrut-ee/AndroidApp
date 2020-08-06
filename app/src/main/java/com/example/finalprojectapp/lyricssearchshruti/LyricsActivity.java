@@ -2,23 +2,31 @@ package com.example.finalprojectapp.lyricssearchshruti;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.example.finalprojectapp.MainActivity;
 import com.example.finalprojectapp.R;
+import com.example.finalprojectapp.geodatasource.CitiesListActivity;
 import com.example.finalprojectapp.geodatasource.GeoLocationActivity;
 import com.example.finalprojectapp.vrajsoccer.SoccerMainActivity;
+import com.google.android.material.navigation.NavigationView;
 
 import org.json.JSONObject;
 
@@ -45,6 +53,7 @@ public class LyricsActivity extends AppCompatActivity {
     private boolean isTablet;
     private ProgressBar progressBar;
     private String lyrics;
+    private DrawerLayout drawlay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,10 +74,6 @@ public class LyricsActivity extends AppCompatActivity {
         infoList = new ArrayList<>();
 
         isTablet = findViewById(R.id.fragmentLayout) != null;
-
-
-//        myAdapter = new LyricsAdapter(getApplicationContext(), R.layout.activity_llistview, infoList);
-//        lview.setAdapter(myAdapter);
 
         SButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +101,54 @@ public class LyricsActivity extends AppCompatActivity {
             }
         });
 
+        //navdraw
+        drawlay = findViewById(R.id.drawlay);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
+                drawlay, toolbar, R.string.open_drawer, R.string.close_drawer);
+        drawlay.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(menuItem -> {
+
+            switch (menuItem.getItemId()) {
+
+                case R.id.navfavsongs:
+                    startActivity(new Intent(this, FavoriteLyricsActivity.class));
+                    break;
+
+                case R.id.Instructions:
+                    new AlertDialog.Builder(this)
+                            .setTitle(R.string.lyricsinstrustions)
+                            .setMessage(R.string.lyricsinstrutionsmessage)
+                            .setNeutralButton(android.R.string.ok, null)
+                            .show();
+                    break;
+
+                case R.id.API:
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://lyricsovh.docs.apiary.io/#")));
+                    break;
+
+                case R.id.donations:
+                    EditText editTextDonateAmount = new EditText(this);
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+                        editTextDonateAmount.setHint(R.string.dollars);
+                        editTextDonateAmount.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+                        editTextDonateAmount.setLayoutParams(layoutParams);
+
+                    new AlertDialog.Builder(this)
+                            .setTitle(R.string.donate_title)
+                            .setMessage(R.string.donate_message)
+                            .setView(editTextDonateAmount)
+                            .setNegativeButton(android.R.string.cancel, null)
+                            .setPositiveButton(R.string.thank_you, (dialog, which) -> Toast.makeText(LyricsActivity.this, R.string.thank_you, Toast.LENGTH_SHORT).show())
+                            .show();
+                    break;
+
+            }
+            drawlay.closeDrawers();
+            return true;
+        });
     }
 
     @Override
@@ -187,5 +240,8 @@ public class LyricsActivity extends AppCompatActivity {
 
         }
     }
+
+
+
 
 }

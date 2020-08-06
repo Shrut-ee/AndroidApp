@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/groupOne"
+        android:checkableBehavior="single">
+    <item
+        android:id="@+id/navfavsongs"
+        android:checkable="false"
+        android:icon="@drawable/ic_favorite"
+        android:title="@string/navfavsongs" />
+
+    </group>
+
+    <group
+        android:id="@+id/groupTwo"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/Instructions"
+            android:title="@string/navinst" />
+        <item
+            android:id="@+id/API"
+            android:title="@string/navapi" />
+        <item
+            android:id="@+id/donations"
+            android:title="@string/navdon" />
+    </group>
+
+</menu>
