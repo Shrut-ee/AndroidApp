@@ -25,6 +25,7 @@
     <string name="geo_latitude">अक्षांश:</string>
     <string name="geo_longitude">देशान्तर:</string>
     <string name="geo_cities_loaded">शहर लोड हुए!</string>
+    <string name="geo_no_cities_loaded">कोई शहर नहीं मिला</string>
     <string name="geo_added_to_fav">पसंदीदा सूची में जोड़ा गया</string>
     <string name="geo_removed_from_fav">पसंदीदा सूची से हटाया गया</string>
     <string name="geo_about_this_project">इस परियोजना के बारे में</string>
@@ -84,4 +85,5 @@
         \ n निर्देश: कोई भी गीत ढूंढें, खोज बॉक्स में टाइप करें और खोज बटन पर क्लिक करें। उन जानकारियों को क्लिक करके गाने को सेव करें जहां आपको सेव या डिलीट करने के ऑप्शन मिलेंगे। सभी संग्रहीत गीतों को खोजने के लिए, संग्रहीत गीतों पर क्लिक करें।</string>
     <string name="save_activity">बची हुई वस्तुएँ</string>
     <string name="favorite_songs">पसंदीदा गाने</string>
+    <string name="song_lyrics_search">गाने के बोल खोज</string>
 </resources>

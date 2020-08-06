@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.finalprojectapp.MainActivity;
 import com.example.finalprojectapp.R;
 import com.example.finalprojectapp.geodatasource.GeoLocationActivity;
+import com.example.finalprojectapp.lyricssearchshruti.LyricsActivity;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -159,7 +160,7 @@ public class SoccerMatchesActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.nav_song_lyrics_search:
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, LyricsActivity.class));
                 finish();
                 break;
             case R.id.nav_deezer_song_search:

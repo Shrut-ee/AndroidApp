@@ -93,7 +93,7 @@
 
             <TextView
                 android:padding="16dp"
-                android:text="Song Lyrics Search"
+                android:text="@string/song_lyrics_search"
                 android:textStyle="bold"
                 android:textColor="#00C853"
                 android:textSize="20sp"

@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.example.finalprojectapp.MainActivity;
 import com.example.finalprojectapp.R;
+import com.example.finalprojectapp.lyricssearchshruti.LyricsActivity;
 import com.example.finalprojectapp.vrajsoccer.SoccerMainActivity;
 
 import androidx.annotation.NonNull;
@@ -51,7 +52,7 @@ public class CityDetailsActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.nav_song_lyrics_search:
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, LyricsActivity.class));
                 finish();
                 break;
             case R.id.nav_deezer_song_search:
