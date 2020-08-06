@@ -1,4 +1,4 @@
-package com.example.finalprojectapp;
+package com.example.finalprojectapp.lyricssearchshruti;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -9,7 +9,9 @@ public class LyricsDBhelp extends SQLiteOpenHelper {
     final static String DATABASE_NAME = "lyricsdatabase";
     final static int VERSION = 1;
     final static String TABLE_NAME = "Lyrics";
+    final static String COL_ID = "_id";
     final static String COL_TITLE = "TITLE";
+    final static String COL_ARTIST = "ARTIST";
     final static String COL_INFORMATION = "INFORMATION";
 
     public LyricsDBhelp(Context context) {
@@ -22,7 +24,7 @@ public class LyricsDBhelp extends SQLiteOpenHelper {
 
         Log.i("Database onCreate:", "creating database");
 
-        db.execSQL("CREATE TABLE " + TABLE_NAME + "( id INTEGER PRIMARY KEY AUTOINCREMENT, TITLE text, INFORMATION text);");
+        db.execSQL("CREATE TABLE " + TABLE_NAME + "(_id INTEGER PRIMARY KEY AUTOINCREMENT, TITLE text, ARTIST text, INFORMATION text);");
     }
 
     @Override

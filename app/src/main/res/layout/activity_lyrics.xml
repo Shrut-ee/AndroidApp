@@ -1,60 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LyricsActivity">
+    tools:context=".lyricssearchshruti.LyricsActivity">
 
-    <ProgressBar
-        android:id="@+id/ProgressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="invisible" />
-
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/Toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:layout_alignParentTop="true"/>
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/SearchBox"
         android:layout_width="200dp"
         android:layout_height="65dp"
         android:layout_below="@id/Toolbar"
-        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
         android:hint="@string/search_hint"
         android:inputType="text" />
 
+    <EditText
+        android:id="@+id/SearchBoxSongName"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/SearchBox"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/search_hint_song_name"
+        android:inputType="text" />
 
 
     <ImageButton
         android:id="@+id/SearchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Toolbar"
-        android:layout_toEndOf="@id/SearchBox"
-        android:src="@drawable/lyrics"/>
+        android:layout_below="@id/SearchBoxSongName"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/lyrics" />
 
-    <Button
-        android:id="@+id/SavedFile"
+    <ProgressBar
+        android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Toolbar"
-        android:layout_alignEnd="@id/SearchButton"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="-135dp"
-        android:text="@string/save_activity" />
+        android:layout_centerInParent="true"
+        android:visibility="invisible" />
 
-    <ListView
-        android:id="@+id/ListView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_below="@id/SearchBox" />
+    <Button
+        android:id="@+id/favList"
+        android:text="@string/favorite_songs"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"/>
 
 
 </RelativeLayout>

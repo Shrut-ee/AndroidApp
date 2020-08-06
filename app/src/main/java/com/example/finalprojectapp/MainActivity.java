@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.finalprojectapp.geodatasource.GeoLocationActivity;
+import com.example.finalprojectapp.lyricssearchshruti.LyricsActivity;
 import com.example.finalprojectapp.vrajsoccer.SoccerMainActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.soccerHighlights).setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, SoccerMainActivity.class));
+        });
+
+        findViewById(R.id.songLyricsSearch).setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, LyricsActivity.class));
         });
     }
 }

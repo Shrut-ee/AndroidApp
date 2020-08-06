@@ -1,23 +1,24 @@
-package com.example.finalprojectapp;
+package com.example.finalprojectapp.lyricssearchshruti;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class LyricsFrameLayout extends AppCompatActivity {
+import com.example.finalprojectapp.R;
+
+public class LyricsDetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lframelayout);
+
         Bundle dataToPass = getIntent().getExtras();
-        LyricsFragement lFragment = new LyricsFragement();
+        LyricsFragment lFragment = new LyricsFragment();
         lFragment.setArguments(dataToPass);
-        lFragment.setTablet(false);
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.fragmentLayout, lFragment)
-                .addToBackStack("AnyName")
+                .replace(R.id.lframeLayout, lFragment)
                 .commit();
     }
 }
