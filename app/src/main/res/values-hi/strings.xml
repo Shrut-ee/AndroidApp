@@ -73,15 +73,15 @@
     <string name="snack">पसंदीदा से हटाया !!</string>
     <string name="toastButton">There is no record for last watched highlights</string>
 
-    <string name="search_hint">Enter artist name</string>
-    <string name="search_hint_song_name">Enter song name</string>
-    <string name="savebutton">Save</string>
-    <string name="deletebutton">Delete</string>
-    <string name="googlebutton">Google Search</string>
-    <string name="help">Info and help</string>
-    <string name="lyrics_help">Author: Shruti Patel
-        \n Version: 1.0
-        \n Instructions: Find any songs, type in the search box and click the search button. Save the songs by clicking the info where you will get options to save or delete. To find all stored songs, click on the stored songs.</string>
-    <string name="save_activity">Saved Items</string>
-    <string name="favorite_songs">Favorite Songs</string>
+    <string name="search_hint">कलाकार का नाम दर्ज करें</string>
+    <string name="search_hint_song_name">गीत का नाम दर्ज करें</string>
+    <string name="savebutton">सहेजें</string>
+    <string name="deletebutton">हटाएं</string>
+    <string name="googlebutton">गूगल खोज</string>
+    <string name="help">जानकारी और मदद</string>
+    <string name="lyrics_help">लेखक: श्रुति पटेल
+        \ n संस्करण: १.०
+        \ n निर्देश: कोई भी गीत ढूंढें, खोज बॉक्स में टाइप करें और खोज बटन पर क्लिक करें। उन जानकारियों को क्लिक करके गाने को सेव करें जहां आपको सेव या डिलीट करने के ऑप्शन मिलेंगे। सभी संग्रहीत गीतों को खोजने के लिए, संग्रहीत गीतों पर क्लिक करें।</string>
+    <string name="save_activity">बची हुई वस्तुएँ</string>
+    <string name="favorite_songs">पसंदीदा गाने</string>
 </resources>
