@@ -17,6 +17,8 @@ import android.widget.Toast;
 
 import com.example.finalprojectapp.MainActivity;
 import com.example.finalprojectapp.R;
+import com.example.finalprojectapp.lyricssearchshruti.LyricsActivity;
+import com.example.finalprojectapp.vrajsoccer.SoccerMainActivity;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
@@ -288,8 +290,15 @@ public class CitiesListActivity extends AppCompatActivity {
             progressBar.setVisibility(View.INVISIBLE);
             adapter.notifyDataSetChanged();
 
-            // Show snack bar
-            Snackbar.make(findViewById(android.R.id.content), R.string.geo_cities_loaded, Snackbar.LENGTH_SHORT).show();
+            if (cities.isEmpty()) {
+                // Show snack bar
+                Snackbar.make(findViewById(android.R.id.content), R.string.geo_no_cities_loaded, Snackbar.LENGTH_SHORT).show();
+            } else {
+                // Show snack bar
+                Snackbar.make(findViewById(android.R.id.content), R.string.geo_cities_loaded, Snackbar.LENGTH_SHORT).show();
+            }
+
+
         }
     }
 
@@ -303,11 +312,11 @@ public class CitiesListActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_soccer_match_highlights:
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, SoccerMainActivity.class));
                 finish();
                 break;
             case R.id.nav_song_lyrics_search:
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, LyricsActivity.class));
                 finish();
                 break;
             case R.id.nav_deezer_song_search:

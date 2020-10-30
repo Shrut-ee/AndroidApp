@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="176dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/Header"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_music_notes"
+        android:tint="@color/white"
+        android:contentDescription="@string/nav_header_desc"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/hTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Header"
+        android:paddingTop="8dp"
+        android:text="@string/lyrics_title"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hTitle"
+        android:text="@string/shruti"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:id="@+id/SubTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hTitle"
+        tools:text="v1"
+        android:layout_alignParentEnd="true"
+        android:typeface="monospace"
+        android:textStyle="bold"
+        android:id="@+id/tvAV" />
+
+</RelativeLayout>

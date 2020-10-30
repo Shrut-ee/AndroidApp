@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.example.finalprojectapp.BuildConfig;
 import com.example.finalprojectapp.MainActivity;
 import com.example.finalprojectapp.R;
+import com.example.finalprojectapp.lyricssearchshruti.LyricsActivity;
+import com.example.finalprojectapp.vrajsoccer.SoccerMainActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
@@ -119,11 +121,11 @@ public class GeoLocationActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_soccer_match_highlights:
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, SoccerMainActivity.class));
                 finish();
                 break;
             case R.id.nav_song_lyrics_search:
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, LyricsActivity.class));
                 finish();
                 break;
             case R.id.nav_deezer_song_search:

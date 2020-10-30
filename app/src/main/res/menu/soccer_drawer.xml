@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/groupOne"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/soccer_matches"
+            android:checked="true"
+            android:icon="@drawable/song"
+            android:title="@string/soccer_title" />
+        <item
+            android:id="@+id/soccer_fav_matches"
+            android:checkable="false"
+            android:icon="@drawable/song"
+            android:title="@string/fav" />
+    </group>
+
+    <group
+        android:id="@+id/groupTwo"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/appInstructions"
+            android:title="@string/soccer_instruction" />
+        <item
+            android:id="@+id/aboutAPI"
+            android:title="@string/about_application" />
+        <item
+            android:id="@+id/donate"
+            android:title="@string/soccer_donate" />
+    </group>
+
+
+</menu>
