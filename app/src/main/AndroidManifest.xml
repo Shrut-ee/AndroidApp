@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.example.finalprojectapp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.finalprojectapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,6 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".lyricssearchshruti.FavoriteLyricsActivity"></activity>
+        <activity android:name=".vrajsoccer.SoccerMatchesActivity" />
+        <activity android:name=".vrajsoccer.HighlightsActivity" />
+        <activity android:name=".vrajsoccer.FavoriteSoccerMatchesActivity" />
+        <activity android:name=".vrajsoccer.SoccerDetails" />
+        <activity android:name=".vrajsoccer.SoccerMainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +29,8 @@
         <activity
             android:name=".geodatasource.GeoLocationActivity"
             android:label="@string/geo_geo_location" />
+        <activity android:name=".lyricssearchshruti.LyricsActivity" />
+        <activity android:name=".lyricssearchshruti.LyricsDetailActivity" />
     </application>
 
 </manifest>

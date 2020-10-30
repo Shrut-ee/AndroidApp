@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.finalprojectapp.MainActivity;
 import com.example.finalprojectapp.R;
+import com.example.finalprojectapp.vrajsoccer.SoccerMainActivity;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
@@ -303,7 +304,7 @@ public class CitiesListActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_soccer_match_highlights:
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, SoccerMainActivity.class));
                 finish();
                 break;
             case R.id.nav_song_lyrics_search:
